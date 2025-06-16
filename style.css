@@ -37,13 +37,6 @@ body {
 .text-secondary{
   cursor: pointer;
 }
-
- .card:hover {
-     transform: translateY(-8px) scale(1.05);
-     transition: transform 0.2s, box-shadow 0.2s;
-     box-shadow: 0 4px 7px 0 #5b6fb2;
-     background: #232a36;
- }
 .allcard{
   display: flex;
   flex-wrap: wrap;
@@ -89,9 +82,9 @@ body {
      font-size: 1rem;
      font-weight: 800;
      margin-top: 8px;
- } 
+ }
 
-  @media (max-width: 767.98px) {
+ @media (max-width: 767.98px) {
      #skills .skill-card {
          max-width: 100%;
          min-height: 140px;
