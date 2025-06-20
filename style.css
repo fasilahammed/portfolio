@@ -16,6 +16,9 @@ body {
   color: #ffffff !important;
   transition: all 0.3s ease;
 }
+.btn-outline-primary:hover{
+  color: #5b6fb2 ;
+}
 
 .nav-link:hover,
 .nav-link:focus {
