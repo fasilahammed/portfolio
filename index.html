@@ -26,290 +26,848 @@
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
 
     <!--------------------------- navbar --------------------------->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark bg-transparent blur-bg">
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
-            <a class="navbar-brand fw-bold " href="#home" style="color: #5b6fb2">Fasil Ahammed KM</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <!-- Brand/Logo -->
+            <a class="navbar-brand fw-bold" href="#home">
+                <span class="brand-text" style="color: #5b6fb2">Fasil Ahammed KM</span>
+                <span class="brand-subtitle">Full-Stack Developer</span>
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Navigation Menu -->
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.instagram.com/fasil.ahamd/?__pwa=1#" target="_blank"><i
-                                class="fab fa-instagram"></i></a>
+                        <a class="nav-link" href="#home">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://linkedin.com" target="_blank"><i
-                                class="fab fa-linkedin-in"></i></a>
+                        <a class="nav-link" href="#about">
+                            <i class="fas fa-user me-1"></i>About
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/fasilahammed" target="_blank"><i
-                                class="fab fa-github"></i></a>
+                        <a class="nav-link" href="#projects">
+                            <i class="fas fa-briefcase me-1"></i>Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">
+                            <i class="fas fa-code me-1"></i>Skills
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            <i class="fas fa-envelope me-1"></i>Contact
+                        </a>
+                    </li>
+
+                    <!-- Social Links - Desktop -->
+                    <li class="nav-item dropdown social-dropdown d-lg-none">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-share-alt"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li>
+                                <a class="dropdown-item" href="https://github.com/fasilahammed" target="_blank">
+                                    <i class="fab fa-github me-2"></i>GitHub
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="https://www.linkedin.com/in/fasil-ahammed-40696736a/"
+                                    target="_blank">
+                                    <i class="fab fa-linkedin-in me-2"></i>LinkedIn
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="https://www.instagram.com/fasil.ahamd/" target="_blank">
+                                    <i class="fab fa-instagram me-2"></i>Instagram
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
+
+                <!-- Social Links - Desktop -->
+                <div class="social-links-desktop d-none d-lg-flex ms-4">
+                    <a href="https://github.com/fasilahammed" class="social-icon" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/fasil-ahammed-40696736a/" class="social-icon" target="_blank"
+                        title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/fasil.ahamd/" class="social-icon" target="_blank"
+                        title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+
+                <!-- Resume/CV Button -->
+                <div class="ms-3">
+                    <a href="path/to/your-resume.pdf" class="btn btn-resume" target="_blank" download>
+                        <i class="fas fa-download me-2"></i>Resume
+                    </a>
+                </div>
             </div>
         </div>
+
+        <!-- Active Indicator -->
+        <div class="nav-indicator"></div>
     </nav>
 
     <!--------------------------- home --------------------------->
-    <section id="home" class="py-5 mt-5">
+    <section id="home" class="py-5">
         <div class="container py-5">
-            <div class="row align-items-center">
-                <!-- Text -->
-                <div class="col-md-6 mb-5 mb-md-0 " data-aos="fade-up">
-                    <h1 class="fw-bold mb-4" style="color:#ffffff">Hey, I'm <span style="color:#5b6fb2">Fasil Ahammed
-                            KM</span></h1>
-                    <p class="lead text-secondary" id="p1">
-                        I'm a <strong style="color:#ffffff">Web Developer</strong> with hands-on experience in HTML,
-                        CSS,
-                        JavaScript, and Bootstrap, focused on building modern, responsive websites with clean and
-                        efficient code.
-                    </p>
-                    <button type="button" class="btn btn-outline-primary bg-transparent"
-                        style="border-color: #5b6fb2;"><a href="#projects" class="nav-link"
-                            style="color: #5b6fb2;">Works</a></button>
-                    <button type="button" class="btn btn-outline-primary bg-transparent"
-                        style="border-color: #5b6fb2;"><a href="#contact" class="nav-link" style="color: #5b6fb2;">Hire
-                            me</a></button>
+            <div class="row align-items-center min-vh-100">
+                <!-- Text Content -->
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="home-content">
+                        <h1 class="fw-bold mb-4 display-5" style="color:#ffffff">
+                            Hey, I'm <span style="color:#5b6fb2">Fasil Ahammed KM</span>
+                        </h1>
+
+                        <div class="intro-text mb-5">
+                            <p class="lead mb-4" style="color: #b0b0b0; line-height: 1.7;">
+                                I'm a <strong style="color:#ffffff">Full-Stack Developer</strong> with hands-on
+                                experience in
+                                <strong style="color:#5b6fb2">React, Redux, Tailwind CSS, JavaScript, C#, ASP.NET Core,
+                                    and SQL</strong>.
+                                I focus on building responsive, user-friendly web applications with clean, efficient
+                                code and
+                                strong backend integration.
+                            </p>
+
+                            <!-- Tech Stack Badges -->
+                            <div class="tech-stack mb-4">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Redux</span>
+                                <span class="tech-badge">Tailwind CSS</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">C#</span>
+                                <span class="tech-badge">ASP.NET Core</span>
+                                <span class="tech-badge">SQL</span>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="action-buttons d-flex flex-wrap gap-3">
+                            <a href="#projects" class="btn btn-primary-custom px-4 py-3">
+                                <i class="fas fa-briefcase me-2"></i>View My Work
+                            </a>
+                            <a href="#contact" class="btn btn-outline-custom px-4 py-3">
+                                <i class="fas fa-paper-plane me-2"></i>Hire Me
+                            </a>
+                            <a href="#about" class="btn btn-link-custom">
+                                Learn More About Me <i class="fas fa-arrow-down ms-2"></i>
+                            </a>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="social-links mt-5">
+                            <a href="https://github.com/fasilahammed" class="social-icon" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/fasil-ahammed-40696736a/" class="social-icon"
+                                target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/fasil.ahamd/" class="social-icon" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <!-- Image -->
-                <div class="col-md-6 text-center">
-                    <img src="fasilphoto1.png" class="img-fluid profile-img" >
+
+                <!-- Profile Image -->
+                <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-delay="200">
+                    <div class="profile-container">
+                        <img src="fasilphoto1.png" class="profile-image" alt="Fasil Ahammed KM">
+                        <div class="profile-glow"></div>
+
+                        <!-- Floating Elements -->
+                        <div class="floating-element element-1">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <div class="floating-element element-2">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="floating-element element-3">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="floating-element element-4">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="400">
+                <a href="#about" class="scroll-link">
+                    <span class="scroll-text">Scroll Down</span>
+                    <div class="scroll-arrow">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
+
     <!--------------------------- about --------------------------->
-    <section id="about" class="text-center py-5 bg-dark">
+    <section id="about" class="py-5 bg-dark">
         <div class="container">
-            <section class="container">
+            <div class="row align-items-center">
+                <!-- Text Content -->
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h2 class="fw-bold mb-4" style="color:#5b6fb2">Full-Stack Developer</h2>
 
-                <h4 class="fw-bold mb-4 " style="color:#5b6fb2">Web Developer!</h4>
-                <p class="lead text-secondary" id="p1" data-aos="fade-right">I'm a creative and detail-oriented Web
-                    Developer with strong
-                    skills
-                    in HTML, CSS,
-                    JavaScript, and Bootstrap. I specialize in building responsive, user-friendly websites that are both
-                    visually appealing and high-performing. With a sharp eye for design and user experience, I enjoy
-                    turning
-                    ideas and mockups into clean, functional web interfaces.</p>
-
-                <!-- pogress -->
-                <div class="progress-stacked " data-aos="fade-right">
-                    <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="40"
-                        aria-valuemin="0" aria-valuemax="100" style="width: 15%">
-                        <div class="progress-bar"></div>
+                    <div class="about-content bg-black rounded-4 p-4 p-md-5 mb-5" data-aos="fade-right">
+                        <p class="lead mb-4" style="color: #b0b0b0; line-height: 1.7;">
+                            I'm a creative and dedicated <strong style="color:#ffffff">Full-Stack Developer</strong>
+                            skilled in
+                            <strong style="color:#5b6fb2">React, Redux, Tailwind CSS, JavaScript, C#, ASP.NET Core, and
+                                SQL</strong>.
+                            I focus on developing responsive, user-centered web applications with clean code, smooth
+                            functionality,
+                            and modern design.
+                        </p>
+                        <p class="mb-4" style="color: #b0b0b0; line-height: 1.7;">
+                            I enjoy transforming ideas into interactive, high-quality web experiences that deliver real
+                            value.
+                            I'm always eager to learn new technologies, take on challenges, and grow both personally and
+                            professionally as a developer.
+                        </p>
                     </div>
-                    <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30"
-                        aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-                        <div class="progress-bar bg-success"></div>
+
+                    <!-- Skills Progress -->
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6" data-aos="fade-right">
+                            <div class="skill-progress mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span style="color: #b0b0b0">Frontend Development</span>
+                                    <span style="color: #5b6fb2">85%</span>
+                                </div>
+                                <div class="progress" style="height: 8px; background-color: #2a2a2a;">
+                                    <div class="progress-bar" role="progressbar"
+                                        style="width: 85%; background-color: #5b6fb2;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-progress mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span style="color: #b0b0b0">Backend Development</span>
+                                    <span style="color: #5b6fb2">80%</span>
+                                </div>
+                                <div class="progress" style="height: 8px; background-color: #2a2a2a;">
+                                    <div class="progress-bar" role="progressbar"
+                                        style="width: 80%; background-color: #5b6fb2;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6" data-aos="fade-left">
+                            <div class="skill-progress mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span style="color: #b0b0b0">Problem Solving</span>
+                                    <span style="color: #5b6fb2">90%</span>
+                                </div>
+                                <div class="progress" style="height: 8px; background-color: #2a2a2a;">
+                                    <div class="progress-bar" role="progressbar"
+                                        style="width: 90%; background-color: #5b6fb2;"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill-progress mb-4">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span style="color: #b0b0b0">Team Collaboration</span>
+                                    <span style="color: #5b6fb2">88%</span>
+                                </div>
+                                <div class="progress" style="height: 8px; background-color: #2a2a2a;">
+                                    <div class="progress-bar" role="progressbar"
+                                        style="width: 88%; background-color: #5b6fb2;"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="30"
-                        aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                        <div class="progress-bar bg-info"></div>
+
+                    <!-- Action Buttons -->
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mb-5" data-aos="fade-up">
+                        <a href="#skills" class="btn btn-outline-primary px-4 py-2"
+                            style="border-color: #5b6fb2; color: #5b6fb2;">
+                            View My Skills
+                        </a>
+                        <a href="#projects" class="btn btn-outline-primary px-4 py-2"
+                            style="border-color: #5b6fb2; color: #5b6fb2;">
+                            See My Projects
+                        </a>
+                        <a href="#contact" class="btn btn-primary px-4 py-2"
+                            style="background-color: #5b6fb2; border-color: #5b6fb2;">
+                            Get In Touch
+                        </a>
                     </div>
-                </div><br>
 
-                <!-- btn -->
-                <div class="btn-group" role="group" aria-label="Basic outlined example">
-                    <button type="button" class="btn btn-outline-primary bg-transparent"
-                        style="border-color: #5b6fb2;"><a href="#skills" class="nav-link"
-                            style="color: #5b6fb2;">Skills</a></button>
-
-                </div><br><br>
-
-                <!-- loading -->
-                <div class="spinner-border spinner-border-sm" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                    <!-- Loading Animation -->
+                    <div class="d-flex justify-content-center align-items-center mb-4" data-aos="fade-up">
+                        <div class="spinner-border me-3" style="color: #5b6fb2;" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <span style="color: #b0b0b0">Always learning & growing</span>
+                    </div>
                 </div>
-                <div class="spinner-grow spinner-grow-sm" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div><br>
-                <hr style="background-color: #5b6fb2;">
+            </div>
 
-            </section>
+            <!-- Divider -->
+            <hr style="background-color: #5b6fb2; height: 2px; opacity: 0.3;">
         </div>
     </section>
 
 
     <!--------------------------- projects --------------------------->
 
-    <section id="projects" class="text-center py-5 bg-black">
+    <section id="projects" class="py-5 bg-black">
         <div class="container py-5">
-            <h2 class=" mb-3" style="color:#5b6fb2">Projects</h2>
+            <!-- Section Header -->
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3" style="color:#5b6fb2">My Projects</h2>
+                <p class="lead" style="color: #b0b0b0;">Here are some of my recent works showcasing my full-stack
+                    development skills</p>
+            </div>
 
-            <br><br>
-            <section class="container">
-                <!-------------------------card1------------------------------------->
-                <div class="allcard">
-                    <div class="card bg-dark text-secondary " style="width: 18rem;" data-aos="zoom-out-up">
-                        <img src="navbar.png" class="card-img-top" alt="W3Schools" height="160px">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color:#5b6fb2">W3 School Navbar Clone</h5>
-                            <p class="card-text text-secondary">A responsive replica of the W3Schools navigation bar
-                                using
-                                HTML and CSS,
-                                built
-                                to practice layout and styling techniques</p><br>
-                            <a href="#" class="btn stretched-link btn-outline-primary bg-transparent"
-                                style="border-color: #5b6fb2; color: #f7f7f7;">View Project</a>
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 - E-commerce Website -->
+                <div class="project-card" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="ecommerce.png" alt="E-commerce Website" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://snapmob1.vercel.app/" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://snapmob1.vercel.app/" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <!-------------------------card2------------------------------------->
-                    <div class="card bg-dark text-secondary" style="width: 18rem;" data-aos="zoom-out-up">
-                        <img src="TASK Photo.png" class="card-img-top" alt="Goibibo" height="160px">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color:#5b6fb2">Goibibo Homepage Clone</h5><br>
-                            <p class="card-text text-secondary">A responsive clone of the Goibibo homepage built using
-                                HTML
-                                and CSS,
-                                focused on layout structuring and UI design replication</p>
-                            <a href="#" class="btn stretched-link btn-outline-primary bg-transparent"
-                                style="border-color: #5b6fb2; color: #fffcfc;">View Project</a>
+                    <div class="project-content">
+                        <h3 class="project-title" style="color:#5b6fb2">E-commerce Website</h3>
+                        <p class="project-description" style="color: #b0b0b0;">
+                            A full-stack e-commerce platform with user and admin panels. Features include product
+                            catalog,
+                            shopping cart, wishlist, order management, and secure payment integration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">ASP.NET Core</span>
+                            <span class="tech-tag">SQL</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature">User Authentication</span>
+                            <span class="feature">Payment Gateway</span>
+                            <span class="feature">Admin Dashboard</span>
                         </div>
                     </div>
-
-                    <!-------------------------card3------------------------------------->
-
-                    <div class="card bg-dark text-secondary" style="width: 18rem;" data-aos="zoom-out-up">
-                        <img src="portfolio.png" class="card-img-top" alt="portfolio" height="160px">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color:#5b6fb2">Portfolio Website</h5>
-                            <p class="card-text">This responsive portfolio site showcases my skills, projects, and
-                                contact
-                                info. Built with HTML, CSS, Bootstrap, and AOS.</p><br>
-                            <a href="https://fasilahammed.github.io/portfolio/" class="btn stretched-link btn-outline-primary bg-transparent"
-                                style="border-color: #5b6fb2; color: #ffffff;" target="_blank">View Project</a>
-                        </div>
-                    </div>
-
-
                 </div>
-            </section>
-            <hr style="background-color: #5b6fb2;">
+
+                <!-- Project 2 - Portfolio Website -->
+                <div class="project-card" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="portfolio.png" alt="Portfolio Website" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/fasilahammed/portfolio" class="project-link"
+                                    target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://fasilahammed.github.io/portfolio/" class="project-link"
+                                    target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" style="color:#5b6fb2">Portfolio Website</h3>
+                        <p class="project-description" style="color: #b0b0b0;">
+                            A responsive portfolio website showcasing my skills, projects, and contact information.
+                            Built with modern web technologies and featuring smooth animations.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">AOS</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature">Responsive Design</span>
+                            <span class="feature">Smooth Animations</span>
+                            <span class="feature">Contact Form</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Project 4 - Goibibo Homepage Clone -->
+                <div class="project-card" data-aos="zoom-in-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="TASK Photo.png" alt="Goibibo Homepage Clone" class="img-fluid">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/fasilahammed" class="project-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://github.com/fasilahammed" class="project-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title" style="color:#5b6fb2">Goibibo Homepage Clone</h3>
+                        <p class="project-description" style="color: #b0b0b0;">
+                            A responsive clone of the Goibibo travel booking homepage. Implemented complex layouts
+                            and UI components to replicate the original design accurately.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature">Complex Layout</span>
+                            <span class="feature">UI Components</span>
+                            <span class="feature">Form Elements</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View More Projects Button -->
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="https://github.com/fasilahammed" class="btn btn-primary-custom" target="_blank">
+                    <i class="fab fa-github me-2"></i>View More on GitHub
+                </a>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5" style="background-color: #5b6fb2; opacity: 0.3;">
         </div>
     </section>
     <!-------------------------skills ------------------------------------->
-    <section id="skills" class="text-center py-5 bg-dark">
+    <section id="skills" class="py-5 bg-dark">
         <div class="container">
-            <h2 class=" mb-3" style="color:#5b6fb2">Skills</h2><br>
-            <section class="container">
+            <!-- Section Header -->
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3" style="color:#5b6fb2">My Skills</h2>
+                <p class="lead" style="color: #b0b0b0;">Technologies and tools I work with</p>
+            </div>
 
-                <!-- skill1 -->
-                <div class="row g-4 justify-content-center">
-                    <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center" data-aos="fade-right">
-                        <div class="card border-0 shadow-sm py-3 px-2 text-center skill-card h-100 w-100">
-                            <div class="d-flex justify-content-center align-items-center mb-2">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                                    alt="HTML" class="skill-img">
+            <!-- Skills Categories -->
+            <div class="skills-categories">
+                <!-- Frontend Skills -->
+                <div class="skill-category" data-aos="fade-up">
+                    <h3 class="category-title" style="color:#5b6fb2">Frontend Development</h3>
+                    <div class="row g-4 justify-content-center">
+                        <!-- HTML5 -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                        alt="HTML5">
+                                </div>
+                                <div class="skill-name">HTML5</div>
+                                <div class="skill-level">Advanced</div>
                             </div>
-                            <div class="skill-label">HTML</div>
+                        </div>
+
+                        <!-- CSS3 -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="150">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                        alt="CSS3">
+                                </div>
+                                <div class="skill-name">CSS3</div>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                        </div>
+
+                        <!-- JavaScript -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                        alt="JavaScript">
+                                </div>
+                                <div class="skill-name">JavaScript</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+
+                        <!-- React -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="250">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                        alt="React">
+                                </div>
+                                <div class="skill-name">React</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+
+                        <!-- Redux -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+                                        alt="Redux">
+                                </div>
+                                <div class="skill-name">Redux</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+
+                        <!-- Tailwind CSS -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="350">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+                                        alt="Tailwind CSS">
+                                </div>
+                                <div class="skill-name">Tailwind CSS</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+
+                        <!-- Bootstrap -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                        alt="Bootstrap">
+                                </div>
+                                <div class="skill-name">Bootstrap</div>
+                                <div class="skill-level">Advanced</div>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- skill2 -->
-                    <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center" data-aos="fade-right">
-                        <div class="card border-0 shadow-sm py-3 px-2 text-center skill-card h-100 w-100">
-                            <div class="d-flex justify-content-center align-items-center mb-2">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                                    alt="CSS" class="skill-img">
-                            </div>
-                            <div class="skill-label">CSS</div>
-                        </div>
-                    </div>
-
-                    <!-- skill3 -->
-                    <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center" data-aos="fade-right">
-                        <div class="card border-0 shadow-sm py-3 px-2 text-center skill-card h-100 w-100">
-                            <div class="d-flex justify-content-center align-items-center mb-2">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                                    alt="JavaScript" class="skill-img">
-                            </div>
-                            <div class="skill-label">JavaScript</div>
-                        </div>
-                    </div>
-
-                    <!-- skill4 -->
-                    <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center" data-aos="fade-right">
-                        <div class="card border-0 shadow-sm py-3 px-2 text-center skill-card h-100 w-100">
-                            <div class="d-flex justify-content-center align-items-center mb-2">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                                    alt="Bootstrap" class="skill-img">
-                            </div>
-                            <div class="skill-label">Bootstrap</div>
-                        </div>
-                    </div>
-
-                    <!-- skill5 -->
-                    <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center" data-aos="fade-right">
-                        <div class="card border-0 shadow-sm py-3 px-2 text-center skill-card h-100 w-100">
-                            <div class="d-flex justify-content-center align-items-center mb-2">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                                    alt="GitHub" class="skill-img">
-                            </div>
-                            <div class="skill-label">GitHub</div>
-                        </div>
-                    </div>
-
-                    <!-- skill6 -->
-                    <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center" data-aos="fade-right">
-                        <div class="card border-0 shadow-sm py-3 px-2 text-center skill-card h-100 w-100">
-                            <div class="d-flex justify-content-center align-items-center mb-2">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                                    alt="Figma" class="skill-img">
-                            </div>
-                            <div class="skill-label">Figma</div>
-                        </div>
-                    </div>
-
                 </div>
-                <hr style="background-color: #5b6fb2;">
 
-            </section>
+                <!-- Backend Skills -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="category-title" style="color:#5b6fb2">Backend Development</h3>
+                    <div class="row g-4 justify-content-center">
+                        <!-- C# -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                                        alt="C#">
+                                </div>
+                                <div class="skill-name">C#</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+
+                        <!-- ASP.NET Core -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="150">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg"
+                                        alt="ASP.NET Core">
+                                </div>
+                                <div class="skill-name">ASP.NET Core</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+
+                        <!-- SQL -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"
+                                        alt="SQL">
+                                </div>
+                                <div class="skill-name">SQL Server</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+
+                        <!-- Node.js -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="250">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                        alt="Node.js">
+                                </div>
+                                <div class="skill-name">Node.js</div>
+                                <div class="skill-level">Basic</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Others -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="category-title" style="color:#5b6fb2">Tools & Others</h3>
+                    <div class="row g-4 justify-content-center">
+                        <!-- Git -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                        alt="Git">
+                                </div>
+                                <div class="skill-name">Git</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+
+                        <!-- GitHub -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="150">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                                        alt="GitHub">
+                                </div>
+                                <div class="skill-name">GitHub</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+
+                        <!-- VS Code -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                                        alt="VS Code">
+                                </div>
+                                <div class="skill-name">VS Code</div>
+                                <div class="skill-level">Advanced</div>
+                            </div>
+                        </div>
+
+                        <!-- Figma -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="250">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                        alt="Figma">
+                                </div>
+                                <div class="skill-name">Figma</div>
+                                <div class="skill-level">Basic</div>
+                            </div>
+                        </div>
+
+                        <!-- Postman -->
+
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg"
+                                        alt="Swagger">
+                                </div>
+                                <div class="skill-name">Swagger</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+
+
+                        <!-- Visual Studio -->
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex justify-content-center">
+                            <div class="skill-card" data-aos="zoom-in" data-aos-delay="350">
+                                <div class="skill-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"
+                                        alt="Visual Studio">
+                                </div>
+                                <div class="skill-name">Visual Studio</div>
+                                <div class="skill-level">Intermediate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Progress Overview -->
+            <div class="skills-overview mt-5" data-aos="fade-up">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="progress-item">
+                            <div class="progress-info">
+                                <span class="progress-label" style="color: #b0b0b0">Frontend Development</span>
+                                <span class="progress-percent" style="color: #5b6fb2">85%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 85%; background-color: #5b6fb2;"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress-item">
+                            <div class="progress-info">
+                                <span class="progress-label" style="color: #b0b0b0">Backend Development</span>
+                                <span class="progress-percent" style="color: #5b6fb2">75%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 75%; background-color: #5b6fb2;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="progress-item">
+                            <div class="progress-info">
+                                <span class="progress-label" style="color: #b0b0b0">Database Management</span>
+                                <span class="progress-percent" style="color: #5b6fb2">70%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 70%; background-color: #5b6fb2;"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress-item">
+                            <div class="progress-info">
+                                <span class="progress-label" style="color: #b0b0b0">Tools & Version Control</span>
+                                <span class="progress-percent" style="color: #5b6fb2">80%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 80%; background-color: #5b6fb2;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5" style="background-color: #5b6fb2; opacity: 0.3;">
         </div>
     </section>
 
     <!--------------------------- contact --------------------------->
     <section id="contact" class="py-5 bg-black">
-        <h1 class="mb-3 text-center" style="color:#5b6fb2">contact.</h1>
-        <div class="section-container " style="margin:50px auto;">
-            <form onsubmit="sendEmail(event)">
-                <div class="mb-3">
-                    <h5 class="highlight" class="form-label">Name</h5>
-                    <input class="form-control form-control-lg" id="form-name" type="text" placeholder="Enter Your Name"
-                        aria-label=".form-control-lg example">
-                </div>
-                <div class="mb-3">
-                    <h5 class="highlight" class="form-label">Email address</h5>
-                    <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp"
-                        placeholder="Enter Your Email">
-                </div>
-                <div class="mb-3">
-                    <h5 class="highlight" class="form-label"> Message</h5>
-                    <textarea class="form-control" id="FormControlTextarea1" rows="3"
-                        placeholder="Enter Your Message"></textarea>
-                </div>
-                <div class="d-grid gap-2">
-                    <button class="btn btn-primary " type="submit">Contact ME</button>
-                </div>
-                <hr style="background-color: #5b6fb2;">
-            </form>
+        <div class="container">
+            <!-- Section Header -->
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3" style="color:#5b6fb2">Get In Touch</h2>
+                <p class="lead" style="color: #b0b0b0;">Ready to start your next project? Let's talk!</p>
+            </div>
 
+            <!-- Contact Form -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-6" data-aos="fade-up">
+                    <div class="contact-form-container bg-dark rounded-4 p-4 p-md-5">
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label for="form-name" class="form-label h5" style="color:#5b6fb2">
+                                    <i class="fas fa-user me-2"></i>Your Name
+                                </label>
+                                <input class="form-control form-control-lg contact-input" id="form-name"
+                                    name="from_name" type="text" placeholder="Enter Your Name" required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="InputEmail1" class="form-label h5" style="color:#5b6fb2">
+                                    <i class="fas fa-envelope me-2"></i>Email Address
+                                </label>
+                                <input type="email" class="form-control contact-input" id="InputEmail1"
+                                    name="from_email" placeholder="Enter Your Email" required>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="FormControlTextarea1" class="form-label h5" style="color:#5b6fb2">
+                                    <i class="fas fa-comment me-2"></i>Your Message
+                                </label>
+                                <textarea class="form-control contact-input" id="FormControlTextarea1" name="message"
+                                    rows="5" placeholder="Enter Your Message" required></textarea>
+                            </div>
+
+                            <div class="d-grid">
+                                <button class="btn btn-primary-custom btn-lg py-3" type="submit">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div id="success-message" class="alert alert-success mt-4 text-center" style="display: none;">
+                <i class="fas fa-check-circle me-2"></i>Thank you! Your message has been sent successfully.
+            </div>
+
+            <!-- Error Message -->
+            <div id="error-message" class="alert alert-danger mt-4 text-center" style="display: none;">
+                <i class="fas fa-exclamation-circle me-2"></i>Failed to send message. Please try again or contact me
+                directly.
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-5" style="background-color: #5b6fb2; opacity: 0.3;">
         </div>
     </section>
 
+
     <!----------------------------- Footer ---------------------------->
-    <footer class="py-4 bg-dark text-center">
+    <footer class="py-5 bg-dark">
         <div class="container">
-            <p class="mb-0 text-secondary">© 2025 Fasil Ahammed KM. All rights reserved.</p>
+            <div class="row align-items-center">
+                <!-- Copyright -->
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0" style="color: #b0b0b0;">
+                        © 2025 <strong style="color:#5b6fb2">Fasil Ahammed KM</strong>. All rights reserved.
+                    </p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-links-footer">
+                        <a href="https://github.com/fasilahammed" class="social-link-footer" target="_blank"
+                            title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/fasil-ahammed-40696736a/" class="social-link-footer"
+                            target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/fasil.ahamd/" class="social-link-footer" target="_blank"
+                            title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="mailto:ahamedahamed1883@gmail.com" class="social-link-footer" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Back to Top Button -->
+            <div class="text-center mt-4">
+                <button id="back-to-top" class="btn-back-to-top" title="Back to Top">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+            </div>
         </div>
     </footer>
+
 
     <!--------------------------- scripts --------------------------->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
