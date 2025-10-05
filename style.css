@@ -1262,3 +1262,299 @@ footer .container > * {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(91, 111, 178, 0.3);
 }
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Home Section Mobile Fixes */
+    #home .display-5 {
+        font-size: 2.2rem !important;
+        line-height: 1.2;
+    }
+    
+    .home-content {
+        text-align: center;
+        padding: 0 15px;
+    }
+    
+    .profile-image {
+        max-width: 280px;
+        margin: 20px auto;
+    }
+    
+    .tech-stack {
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .tech-badge {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .action-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    /* Navigation Mobile Fixes */
+    .navbar-brand {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .brand-text {
+        font-size: 1.2rem;
+    }
+    
+    .brand-subtitle {
+        display: none;
+    }
+    
+    /* About Section Mobile Fixes */
+    #about .about-content {
+        padding: 1.5rem !important;
+        margin: 0 10px;
+    }
+    
+    #about .lead {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .skill-progress {
+        margin-bottom: 1.5rem;
+    }
+    
+    #about .btn {
+        width: 100%;
+        max-width: 250px;
+        margin: 5px 0;
+    }
+    
+    /* Projects Section Mobile Fixes */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 10px;
+    }
+    
+    .project-card {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    
+    .project-image {
+        height: 200px;
+    }
+    
+    .project-content {
+        padding: 1.2rem;
+    }
+    
+    .project-tech, .project-features {
+        justify-content: center;
+        gap: 0.4rem;
+    }
+    
+    .tech-tag, .feature {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    /* Skills Section Mobile Fixes */
+    .skill-category {
+        margin-bottom: 2rem;
+    }
+    
+    .category-title {
+        font-size: 1.3rem;
+    }
+    
+    .skill-card {
+        padding: 1rem 0.5rem;
+    }
+    
+    .skill-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .skill-icon img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .skill-name {
+        font-size: 0.9rem;
+    }
+    
+    .skill-level {
+        font-size: 0.75rem;
+    }
+    
+    .skills-overview {
+        padding: 1.5rem;
+        margin: 0 10px;
+    }
+    
+    /* Contact Section Mobile Fixes */
+    .contact-form-container {
+        padding: 1.5rem !important;
+        margin: 0 10px;
+    }
+    
+    .contact-input {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    /* Footer Mobile Fixes */
+    footer .row {
+        text-align: center;
+    }
+    
+    .social-links-footer {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    /* General Mobile Improvements */
+    section {
+        padding: 60px 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1.1rem;
+    }
+}
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 576px) {
+    /* Home Section */
+    #home .display-5 {
+        font-size: 1.8rem !important;
+    }
+    
+    .profile-image {
+        max-width: 250px;
+    }
+    
+    .floating-element {
+        display: none;
+    }
+    
+    /* Navigation */
+    .navbar-nav .nav-link {
+        padding: 0.8rem 1rem !important;
+        text-align: center;
+    }
+    
+    .navbar-collapse {
+        text-align: center;
+    }
+    
+    /* About Section */
+    #about .fw-bold {
+        font-size: 1.5rem;
+    }
+    
+    /* Projects Section */
+    .project-title {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .project-description {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    
+    /* Skills Section */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .skill-card {
+        padding: 1rem 0.5rem;
+    }
+    
+    /* Contact Section */
+    .contact-form-container {
+        padding: 1rem !important;
+    }
+    
+    .form-label.h5 {
+        font-size: 1.1rem;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 2rem 0 !important;
+    }
+}
+
+/* Tablet Optimization */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .profile-image {
+        max-width: 350px;
+    }
+}
+
+/* Touch Device Improvements */
+@media (hover: none) and (pointer: coarse) {
+    .skill-card:hover,
+    .project-card:hover,
+    .btn:hover {
+        transform: none;
+    }
+    
+    .skill-card:active,
+    .project-card:active,
+    .btn:active {
+        transform: scale(0.98);
+    }
+    
+    /* Increase tap target sizes */
+    .nav-link,
+    .btn,
+    .social-icon,
+    .project-link {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Prevent horizontal scroll */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Smooth mobile animations */
+@media (prefers-reduced-motion: no-preference) {
+    .skill-card,
+    .project-card,
+    .btn {
+        transition: all 0.3s ease;
+    }
+}

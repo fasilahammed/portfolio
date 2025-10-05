@@ -546,6 +546,51 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(checkResumeFile, 2000);
 });
 
+// Mobile-specific enhancements
+function enhanceMobileExperience() {
+    // Check if mobile device
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+        // Add touch feedback for mobile
+        const touchElements = document.querySelectorAll('.skill-card, .project-card, .btn');
+        
+        touchElements.forEach(element => {
+            element.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(0.98)';
+            });
+            
+            element.addEventListener('touchend', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+        
+        // Optimize animations for mobile
+        if (typeof AOS !== 'undefined') {
+            AOS.refresh();
+        }
+        
+        // Improve scrolling performance
+        document.documentElement.style.scrollBehavior = 'smooth';
+    }
+}
+
+// Initialize mobile enhancements
+document.addEventListener('DOMContentLoaded', function() {
+    enhanceMobileExperience();
+    
+    // Re-run on resize
+    window.addEventListener('resize', enhanceMobileExperience);
+});
+
+// Prevent zoom on input focus (iOS)
+document.addEventListener('DOMContentLoaded', function() {
+    let viewport = document.querySelector("meta[name=viewport]");
+    if (viewport) {
+        viewport.setAttribute("content", "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no");
+    }
+});
+
 // Console greeting (optional)
 console.log(`
 %cWelcome to Fasil Ahammed KM's Portfolio! 👋
