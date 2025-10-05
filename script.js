@@ -107,6 +107,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize EmailJS with your public key
     emailjs.init("pDKpttsGzOGY75O0Z");
     
+    console.log("EmailJS initialized with Service ID: service_rcz600d");
+    
     // Contact form handling
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
@@ -133,39 +135,64 @@ function sendEmail(form) {
     
     // Get form data
     const formData = {
-        from_name: document.getElementById('form-name').value,
-        from_email: document.getElementById('InputEmail1').value,
-        message: document.getElementById('FormControlTextarea1').value,
+        from_name: document.getElementById('form-name').value.trim(),
+        from_email: document.getElementById('InputEmail1').value.trim(),
+        message: document.getElementById('FormControlTextarea1').value.trim(),
         to_name: 'Fasil Ahammed KM',
-        reply_to: document.getElementById('InputEmail1').value
+        reply_to: document.getElementById('InputEmail1').value.trim()
     };
     
     console.log('Sending email with params:', formData);
     
     // Validate form
-    if (!formData.from_name || !formData.from_email || !formData.message) {
-        showError('Please fill in all fields');
+    if (!formData.from_name) {
+        showError('Please enter your name');
+        document.getElementById('form-name').focus();
         submitBtn.classList.remove('loading');
         submitBtn.disabled = false;
         return;
     }
     
-    // Email validation
+    if (!formData.from_email) {
+        showError('Please enter your email address');
+        document.getElementById('InputEmail1').focus();
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+        return;
+    }
+    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.from_email)) {
-        showError('Please enter a valid email address');
+        showError('Please enter a valid email address (e.g., example@email.com)');
+        document.getElementById('InputEmail1').focus();
         submitBtn.classList.remove('loading');
         submitBtn.disabled = false;
         return;
     }
     
-    // Send email using EmailJS - REPLACE WITH YOUR ACTUAL SERVICE AND TEMPLATE IDs
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+    if (!formData.message) {
+        showError('Please enter your message');
+        document.getElementById('FormControlTextarea1').focus();
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+        return;
+    }
+    
+    if (formData.message.length < 10) {
+        showError('Please enter a message with at least 10 characters');
+        document.getElementById('FormControlTextarea1').focus();
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+        return;
+    }
+    
+    // Send email using EmailJS with YOUR ACTUAL IDs
+    emailjs.send('service_rcz600d', 'template_r18o3qf', formData)
         .then(function(response) {
             console.log('SUCCESS!', response.status, response.text);
             
             // Show success message
-            showSuccess('Thank you! Your message has been sent successfully.');
+            showSuccess('Thank you! Your message has been sent successfully. I will get back to you soon!');
             
             // Reset form
             form.reset();
@@ -174,14 +201,15 @@ function sendEmail(form) {
             console.log('FAILED...', error);
             
             // Show error message with fallback option
-            showError('Failed to send message. Please try again or contact me directly at <strong>fasilahammedkm@gmail.com</strong>');
+            showError('Failed to send message via email service. Opening your email client instead...');
             
-            // Optional: Fallback to mailto after a delay
+            // Fallback to mailto after a delay
             setTimeout(() => {
-                const subject = 'Contact from Portfolio Website';
-                const body = `Name: ${formData.from_name}\nEmail: ${formData.from_email}\nMessage: ${formData.message}`;
-                window.open(`mailto:fasilahammedkm@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank');
-            }, 2000);
+                const subject = 'Contact from Portfolio Website - ' + formData.from_name;
+                const body = `Name: ${formData.from_name}\nEmail: ${formData.from_email}\n\nMessage:\n${formData.message}`;
+                window.open(`mailto:ahamedahamed1883@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank');
+            }, 1500);
+            
         })
         .finally(() => {
             // Remove loading state
@@ -384,103 +412,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Enhanced form submission with better error handling
-function handleFormSubmission(form) {
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const formData = {
-        from_name: document.getElementById('form-name').value.trim(),
-        from_email: document.getElementById('InputEmail1').value.trim(),
-        message: document.getElementById('FormControlTextarea1').value.trim()
-    };
-    
-    // Enhanced validation
-    if (!formData.from_name) {
-        showError('Please enter your name');
-        document.getElementById('form-name').focus();
-        return false;
-    }
-    
-    if (!formData.from_email) {
-        showError('Please enter your email address');
-        document.getElementById('InputEmail1').focus();
-        return false;
-    }
-    
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.from_email)) {
-        showError('Please enter a valid email address (e.g., example@email.com)');
-        document.getElementById('InputEmail1').focus();
-        return false;
-    }
-    
-    if (!formData.message) {
-        showError('Please enter your message');
-        document.getElementById('FormControlTextarea1').focus();
-        return false;
-    }
-    
-    if (formData.message.length < 10) {
-        showError('Please enter a message with at least 10 characters');
-        document.getElementById('FormControlTextarea1').focus();
-        return false;
-    }
-    
-    return true;
-}
-
-// Alternative contact form handler for testing
-function setupContactFormAlternative() {
-    const contactForm = document.getElementById('contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            if (!handleFormSubmission(this)) {
-                return;
-            }
-            
-            const submitBtn = this.querySelector('button[type="submit"]');
-            submitBtn.classList.add('loading');
-            submitBtn.disabled = true;
-            
-            const formData = {
-                from_name: document.getElementById('form-name').value,
-                from_email: document.getElementById('InputEmail1').value,
-                message: document.getElementById('FormControlTextarea1').value
-            };
-            
-            // Try EmailJS first
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
-                .then((response) => {
-                    console.log('Email sent successfully:', response);
-                    showSuccess('Thank you! Your message has been sent successfully. I will get back to you soon!');
-                    this.reset();
-                })
-                .catch((error) => {
-                    console.error('EmailJS failed:', error);
-                    // Fallback to mailto
-                    showError('Email service temporarily unavailable. Opening your email client instead...');
-                    
-                    setTimeout(() => {
-                        const subject = `Portfolio Contact: ${formData.from_name}`;
-                        const body = `Name: ${formData.from_name}\nEmail: ${formData.from_email}\n\nMessage:\n${formData.message}`;
-                        window.location.href = `mailto:fasilahammedkm@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-                    }, 1000);
-                })
-                .finally(() => {
-                    submitBtn.classList.remove('loading');
-                    submitBtn.disabled = false;
-                });
-        });
-    }
-}
-
-// Initialize alternative contact form
-document.addEventListener('DOMContentLoaded', function() {
-    setupContactFormAlternative();
-});
-
 // Utility function for debouncing
 function debounce(func, wait) {
     let timeout;
@@ -530,13 +461,100 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Resume Download Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const resumeButtons = document.querySelectorAll('a[download*="Resume"], a[download*="resume"], .btn-resume, .btn-resume-download');
+    
+    resumeButtons.forEach(button => {
+        // Add click event for tracking
+        button.addEventListener('click', function(e) {
+            const resumeUrl = this.getAttribute('href');
+            
+            // Check if file exists (basic check)
+            if (resumeUrl && !resumeUrl.includes('path/to/') && resumeUrl !== '#') {
+                console.log('Resume download initiated:', resumeUrl);
+                
+                // Optional: Add analytics or tracking here
+                trackResumeDownload();
+            } else {
+                e.preventDefault();
+                showError('Resume file not found. Please contact me directly at fasilahammedkm@gmail.com');
+            }
+        });
+        
+        // Add hover effects
+        button.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+        });
+        
+        button.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+});
+
+// Track resume download (optional)
+function trackResumeDownload() {
+    // You can add Google Analytics or other tracking here
+    console.log('Resume downloaded at:', new Date().toLocaleString());
+    
+    // Example: Google Analytics event tracking
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'resume_download', {
+            'event_category': 'engagement',
+            'event_label': 'Resume Download'
+        });
+    }
+}
+
+// Check if resume file exists
+function checkResumeFile() {
+    const resumeUrl = 'resume.pdf';
+    
+    fetch(resumeUrl, { method: 'HEAD' })
+        .then(response => {
+            if (!response.ok) {
+                console.warn('Resume file not found or inaccessible');
+                showResumeFallback();
+            }
+        })
+        .catch(error => {
+            console.warn('Resume file check failed:', error);
+            showResumeFallback();
+        });
+}
+
+// Show fallback if resume is not available
+function showResumeFallback() {
+    const resumeButtons = document.querySelectorAll('.btn-resume, .btn-resume-download');
+    
+    resumeButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            showError('Resume currently unavailable. Please contact me at fasilahammedkm@gmail.com for my resume.');
+        });
+        
+        // Visual indication that resume might not be available
+        button.style.opacity = '0.8';
+        button.title = 'Resume might be unavailable - Click to contact';
+    });
+}
+
+// Initialize resume check when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Check resume file after a short delay
+    setTimeout(checkResumeFile, 2000);
+});
+
 // Console greeting (optional)
 console.log(`
 %cWelcome to Fasil Ahammed KM's Portfolio! 👋
 %cFull-Stack Developer | React | .NET | SQL
+%cEmailJS configured with Service: service_rcz600d
 %cFeel free to explore my work and get in touch! 🚀
 `, 
 'color: #5b6fb2; font-size: 18px; font-weight: bold;',
 'color: #b0b0b0; font-size: 14px;',
-'color: #28a745; font-size: 12px;'
+'color: #28a745; font-size: 12px;',
+'color: #ff6b6b; font-size: 12px;'
 );

@@ -1184,3 +1184,81 @@ footer .container > * {
         transform: rotate(360deg);
     }
 }
+/* Resume Button Styles - Matching Website Theme */
+.btn-resume {
+    background: transparent;
+    border: 2px solid #5b6fb2;
+    color: #5b6fb2 !important;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.btn-resume:hover {
+    background: #5b6fb2;
+    color: #000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(91, 111, 178, 0.3);
+    text-decoration: none;
+}
+
+/* Alternative style if you want it to match the primary buttons */
+.btn-resume-primary {
+    background: linear-gradient(135deg, #5b6fb2, #4a5d9c);
+    border: none;
+    color: #000 !important;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(91, 111, 178, 0.3);
+}
+
+.btn-resume-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(91, 111, 178, 0.4);
+    color: #000 !important;
+}
+
+/* Mobile responsive for resume button */
+@media (max-width: 991.98px) {
+    .btn-resume {
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: center;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .social-links-desktop {
+        display: none !important;
+    }
+}
+
+/* If you want the resume button to match your outline buttons exactly */
+.btn-resume-outline {
+    border: 2px solid #5b6fb2;
+    color: #5b6fb2 !important;
+    background: transparent;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-resume-outline:hover {
+    background: #5b6fb2;
+    color: #000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(91, 111, 178, 0.3);
+}
